@@ -1,0 +1,10 @@
+homepage: "https://rust-analyzer.github.io/"
+language: rust
+primary_contact: "security@rust-lang.org"
+main_repo: "https://github.com/rust-lang/rust-analyzer"
+vendor_ccs:
+  nathaniel.brough@rough.run
+sanitizers:
+  - address
+fuzzing_engines:
+  - libfuzzer
