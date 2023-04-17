@@ -1,0 +1,12 @@
+homepage: "https://halide-lang.org/"
+language: c++
+# TODO: Find primary contact
+primary_contact: ""
+main_repo: "https://github.com/halide/Halide"
+file_github_issue: false
+auto_ccs:
+  - nathaniel.brough@gmail.com
+
+# TODO: Configure build to allow different backends
+fuzzing_engines:
+  - libfuzzer
