@@ -6,7 +6,3 @@ main_repo: "https://github.com/halide/Halide"
 file_github_issue: false
 auto_ccs:
   - nathaniel.brough@gmail.com
-
-# TODO: Configure build to allow different backends
-fuzzing_engines:
-  - libfuzzer

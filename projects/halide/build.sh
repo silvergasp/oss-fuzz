@@ -37,5 +37,4 @@ cmake -G Ninja  -S . -B build -DCMAKE_BUILD_TYPE=Release \
 
 cmake --build ./build -j$(nproc)
 
-find . -name fuzz_simplify
-# TODO: Copy over fuzzer to $OUT
+cp ./build/test/fuzz/fuzz_* $OUT

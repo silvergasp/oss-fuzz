@@ -33,6 +33,6 @@ RUN cmake --build llvm-build -j$(nproc)
 RUN cmake --install llvm-build --prefix $SRC/llvm-install
 
 # TODO: Change this back to main branch
-RUN git clone --depth 1 --recurse-submodules -j$(nproc) https://github.com/silvergasp/Halide.git halide
+RUN git clone --depth 1 -b fix_oss https://github.com/silvergasp/Halide.git halide
 WORKDIR halide
 COPY build.sh $SRC/
