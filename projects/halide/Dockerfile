@@ -16,10 +16,13 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder
 
-RUN apt-get update && apt-get install -y ninja-build lsb-core software-properties-common zlib1g-dev
+RUN apt-get update && apt-get install -y ninja-build lsb-core software-properties-common zlib1g-dev wget
 RUN pip3 install -U cmake
 
-RUN git clone --depth 1 --branch llvmorg-15.0.0 https://github.com/llvm/llvm-project.git $SRC/llvm-project
+RUN wget https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.5/clang-16.0.5.src.tar.xz && \
+    tar -xvf clang-16.0.5.src.tar.xz 
+
+RUN ls clang-* && false
 RUN git clone --depth 1 https://github.com/halide/Halide.git halide
 
 WORKDIR halide
