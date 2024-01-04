@@ -9,6 +9,5 @@ sanitizers:
  - memory
 fuzzing_engines:
  - libfuzzer
- - afl
  - honggfuzz
  - libfuzzer
